@@ -1,0 +1,110 @@
+[{
+	"subject": "二次注浆量过大",
+	"parent_subject_type": "RiskFactor",
+	"subject_type": "Methods&Params",
+	"weight": "0.8008",
+	"prior_probability": "0",
+	"predicate": "导致",
+	"object": "TBM隧道塌方",
+	"object_type": "RiskResult",
+	"relation_type": "因果关系"
+},
+{
+	"subject": "注浆时间过长",
+	"parent_subject_type": "RiskFactor",
+	"subject_type": "Methods&Params",
+	"weight": "0.8008",
+	"prior_probability": "0",
+	"predicate": "导致",
+	"object": "TBM隧道塌方",
+	"object_type": "RiskResult",
+	"relation_type": "因果关系"
+},
+{
+	"subject": "主轴承损伤",
+	"parent_subject_type": "RiskFactor",
+	"subject_type": "Equip&Tools",
+	"weight": "0.8008",
+	"prior_probability": "0",
+	"predicate": "导致",
+	"object": "TBM隧道塌方",
+	"object_type": "RiskResult",
+	"relation_type": "因果关系"
+},
+{
+	"subject": "推进速度过小",
+	"parent_subject_type": "RiskFactor",
+	"subject_type": "Methods&Params",
+	"weight": "0.8007",
+	"prior_probability": "0",
+	"predicate": "导致",
+	"object": "TBM隧道塌方",
+	"object_type": "RiskResult",
+	"relation_type": "因果关系"
+},
+{
+	"subject": "同步注浆量不足",
+	"parent_subject_type": "RiskFactor",
+	"subject_type": "Methods&Params",
+	"weight": "0.8007",
+	"prior_probability": "0",
+	"predicate": "导致",
+	"object": "TBM隧道塌方",
+	"object_type": "RiskResult",
+	"relation_type": "因果关系"
+},
+{
+	"subject": "泥浆比重过低",
+	"parent_subject_type": "RiskFactor",
+	"subject_type": "Methods&Params",
+	"weight": "0.8007",
+	"prior_probability": "0",
+	"predicate": "导致",
+	"object": "TBM隧道塌方",
+	"object_type": "RiskResult",
+	"relation_type": "因果关系"
+},
+{
+	"subject": "沉降速率阈值",
+	"parent_subject_type": "RiskFactor",
+	"subject_type": "Methods&Params",
+	"weight": "0.8007",
+	"prior_probability": "0",
+	"predicate": "导致",
+	"object": "TBM隧道塌方",
+	"object_type": "RiskResult",
+	"relation_type": "因果关系"
+},
+{
+	"subject": "侧壁围岩失稳滑移",
+	"parent_subject_type": "RiskFactor",
+	"subject_type": "Event",
+	"weight": "0.8007",
+	"prior_probability": "0",
+	"predicate": "触发",
+	"object": "TBM隧道塌方",
+	"object_type": "RiskResult",
+	"relation_type": "因果关系"
+},
+{
+	"subject": "推进速度过大",
+	"parent_subject_type": "RiskFactor",
+	"subject_type": "Methods&Params",
+	"weight": "0.8006",
+	"prior_probability": "0",
+	"predicate": "导致",
+	"object": "TBM隧道塌方",
+	"object_type": "RiskResult",
+	"relation_type": "因果关系"
+},
+{
+	"subject": "泥水压力不足",
+	"parent_subject_type": "RiskFactor",
+	"subject_type": "Methods&Params",
+	"weight": "0.8006",
+	"prior_probability": "0",
+	"predicate": "导致",
+	"object": "TBM隧道塌方",
+	"object_type": "RiskResult",
+	"relation_type": "因果关系"
+}]
