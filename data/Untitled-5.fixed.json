@@ -1,0 +1,282 @@
+[
+  {
+    "subject": "地质条件变化",
+    "predicate": "属于",
+    "object": "地质条件",
+    "relation_type": "属性关系",
+    "subject_type": "RiskFactor",
+    "object_type": "RiskFactor",
+    "weight": 0.5,
+    "prior_probability": 0
+  },
+  {
+    "subject": "软弱地层",
+    "predicate": "属于",
+    "object": "地质条件",
+    "relation_type": "属性关系",
+    "subject_type": "RiskFactor",
+    "object_type": "RiskFactor",
+    "weight": 0.5,
+    "prior_probability": 0
+  },
+  {
+    "subject": "地下水位变化",
+    "predicate": "属于",
+    "object": "水文条件",
+    "relation_type": "属性关系",
+    "subject_type": "RiskFactor",
+    "object_type": "RiskFactor",
+    "weight": 0.5,
+    "prior_probability": 0
+  },
+  {
+    "subject": "高水压环境",
+    "predicate": "属于",
+    "object": "水文条件",
+    "relation_type": "属性关系",
+    "subject_type": "RiskFactor",
+    "object_type": "RiskFactor",
+    "weight": 0.5,
+    "prior_probability": 0
+  },
+  {
+    "subject": "施工设备",
+    "predicate": "导致",
+    "object": "设备综合故障",
+    "relation_type": "因果关系",
+    "subject_type": "RiskFactor",
+    "object_type": "IntermediateState",
+    "weight": 0.7,
+    "prior_probability": 0
+  },
+  {
+    "subject": "施工设备故障",
+    "predicate": "汇聚为",
+    "object": "设备综合故障",
+    "relation_type": "因果关系",
+    "subject_type": "Event",
+    "object_type": "IntermediateState",
+    "weight": 0.8,
+    "prior_probability": 0
+  },
+  {
+    "subject": "设备综合故障",
+    "predicate": "导致",
+    "object": "主轴承损伤",
+    "relation_type": "因果关系",
+    "subject_type": "IntermediateState",
+    "object_type": "Event",
+    "weight": 0.6,
+    "prior_probability": 0
+  },
+  {
+    "subject": "设备综合故障",
+    "predicate": "导致",
+    "object": "密封系统失效",
+    "relation_type": "因果关系",
+    "subject_type": "IntermediateState",
+    "object_type": "Event",
+    "weight": 0.65,
+    "prior_probability": 0
+  },
+  {
+    "subject": "渣土流动性差",
+    "predicate": "导致",
+    "object": "螺旋机扭矩升高",
+    "relation_type": "因果关系",
+    "subject_type": "RiskFactor",
+    "object_type": "Monitoring",
+    "weight": 0.75,
+    "prior_probability": 0
+  },
+  {
+    "subject": "螺旋机扭矩升高",
+    "predicate": "导致",
+    "object": "仓压波动增大",
+    "relation_type": "因果关系",
+    "subject_type": "Monitoring",
+    "object_type": "Monitoring",
+    "weight": 0.7,
+    "prior_probability": 0
+  },
+  {
+    "subject": "TBM隧道塌方",
+    "predicate": "具有类型",
+    "object": "塌方类型",
+    "relation_type": "属性关系",
+    "subject_type": "Event",
+    "object_type": "RiskFactor",
+    "weight": 0.4,
+    "prior_probability": 0
+  },
+  {
+    "subject": "监测频率不足",
+    "predicate": "导致",
+    "object": "监测盲区形成",
+    "relation_type": "因果关系",
+    "subject_type": "Monitoring",
+    "object_type": "RiskFactor",
+    "weight": 0.8,
+    "prior_probability": 0
+  },
+  {
+    "subject": "风险预警触发",
+    "predicate": "导致",
+    "object": "预警响应启动",
+    "relation_type": "因果关系",
+    "subject_type": "Monitoring",
+    "object_type": "Human",
+    "weight": 0.6,
+    "prior_probability": 0
+  },
+  {
+    "subject": "沉降速率阈值",
+    "predicate": "属于",
+    "object": "控制指标",
+    "relation_type": "属性关系",
+    "subject_type": "RiskFactor",
+    "object_type": "RiskFactor",
+    "weight": 0.5,
+    "prior_probability": 0
+  },
+  {
+    "subject": "控制指标",
+    "predicate": "属于",
+    "object": "监测指标",
+    "relation_type": "属性关系",
+    "subject_type": "RiskFactor",
+    "object_type": "RiskFactor",
+    "weight": 0.4,
+    "prior_probability": 0
+  },
+  {
+    "subject": "掌子面失稳",
+    "predicate": "导致",
+    "object": "连锁式塌落扩展",
+    "relation_type": "因果关系",
+    "subject_type": "Event",
+    "object_type": "Event",
+    "weight": 0.85,
+    "prior_probability": 0
+  },
+  {
+    "subject": "连锁式塌落扩展",
+    "predicate": "导致",
+    "object": "TBM隧道塌方",
+    "relation_type": "因果关系",
+    "subject_type": "Event",
+    "object_type": "Event",
+    "weight": 0.9,
+    "prior_probability": 0
+  },
+  {
+    "subject": "背后空洞",
+    "predicate": "导致",
+    "object": "地表沉降增大",
+    "relation_type": "因果关系",
+    "subject_type": "RiskFactor",
+    "object_type": "Monitoring",
+    "weight": 0.75,
+    "prior_probability": 0
+  },
+  {
+    "subject": "地表沉降增大",
+    "predicate": "导致",
+    "object": "拱顶下沉与应力集中",
+    "relation_type": "因果关系",
+    "subject_type": "Monitoring",
+    "object_type": "Event",
+    "weight": 0.8,
+    "prior_probability": 0
+  },
+  {
+    "subject": "拱顶下沉与应力集中",
+    "predicate": "导致",
+    "object": "TBM隧道塌方",
+    "relation_type": "因果关系",
+    "subject_type": "Event",
+    "object_type": "Event",
+    "weight": 0.85,
+    "prior_probability": 0
+  },
+  {
+    "subject": "施工事件综合效应",
+    "predicate": "导致",
+    "object": "TBM隧道塌方",
+    "relation_type": "因果关系",
+    "subject_type": "Event",
+    "object_type": "Event",
+    "weight": 0.8,
+    "prior_probability": 0
+  },
+  {
+    "subject": "土压波动增大",
+    "predicate": "属于",
+    "object": "监测系统",
+    "relation_type": "属性关系",
+    "subject_type": "Monitoring",
+    "object_type": "RiskFactor",
+    "weight": 0.5,
+    "prior_probability": 0
+  },
+  {
+    "subject": "切削系统",
+    "predicate": "位于",
+    "object": "TBM前端",
+    "relation_type": "位置关系",
+    "subject_type": "Equipment",
+    "object_type": "Location",
+    "weight": 0.5,
+    "prior_probability": 0
+  },
+  {
+    "subject": "推进系统",
+    "predicate": "位于",
+    "object": "TBM中部",
+    "relation_type": "位置关系",
+    "subject_type": "Equipment",
+    "object_type": "Location",
+    "weight": 0.5,
+    "prior_probability": 0
+  },
+  {
+    "subject": "管片安装系统",
+    "predicate": "位于",
+    "object": "TBM后部",
+    "relation_type": "位置关系",
+    "subject_type": "Equipment",
+    "object_type": "Location",
+    "weight": 0.5,
+    "prior_probability": 0
+  },
+  {
+    "subject": "地质勘探数据",
+    "predicate": "输入到",
+    "object": "风险评估模型",
+    "relation_type": "信息关系",
+    "subject_type": "Data",
+    "object_type": "Model",
+    "weight": 0.6,
+    "prior_probability": 0
+  },
+  {
+    "subject": "监测数据异常",
+    "predicate": "触发",
+    "object": "风险预警系统",
+    "relation_type": "因果关系",
+    "subject_type": "Monitoring",
+    "object_type": "System",
+    "weight": 0.75,
+    "prior_probability": 0
+  },
+  {
+    "subject": "应急预案",
+    "predicate": "激活",
+    "object": "风险响应措施",
+    "relation_type": "因果关系",
+    "subject_type": "Human",
+    "object_type": "Human",
+    "weight": 0.7,
+    "prior_probability": 0
+  }
+]

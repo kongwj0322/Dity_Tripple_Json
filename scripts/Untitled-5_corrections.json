@@ -1,0 +1,184 @@
+{
+  "description": "Machine-readable corrections applied to Untitled-5.json normalization",
+  "version": "1.0",
+  "applied_rules": [
+    "attribute_relations_to_top_classes",
+    "unify_equipment_comprehensive_failure",
+    "correct_type_mismatches",
+    "collapse_types_vs_final_result",
+    "predicate_normalization",
+    "indicator_hierarchy_clarification",
+    "attribute_location_edge_weights",
+    "keep_mechanism_paths_intact"
+  ],
+  "relations_replace": [
+    {
+      "description": "Replace 表现为/具有 with 属于 for top-level categories",
+      "before": {
+        "predicate": ["表现为", "具有"],
+        "object": ["地质条件", "水文条件"],
+        "relation_type": "属性关系"
+      },
+      "after": {
+        "predicate": "属于",
+        "weight": 0.5
+      }
+    },
+    {
+      "description": "Correct 主轴承损伤 type to Event",
+      "before": {
+        "subject": "主轴承损伤",
+        "subject_type": "any"
+      },
+      "after": {
+        "subject": "主轴承损伤",
+        "subject_type": "Event"
+      }
+    },
+    {
+      "description": "Correct 密封系统失效 type to Event",
+      "before": {
+        "subject": "密封系统失效",
+        "subject_type": "any"
+      },
+      "after": {
+        "subject": "密封系统失效",
+        "subject_type": "Event"
+      }
+    },
+    {
+      "description": "Correct 螺旋机扭矩升高 type to Monitoring",
+      "before": {
+        "subject": "螺旋机扭矩升高",
+        "subject_type": "any"
+      },
+      "after": {
+        "subject": "螺旋机扭矩升高",
+        "subject_type": "Monitoring"
+      }
+    },
+    {
+      "description": "Correct 土压波动增大 type to Monitoring",
+      "before": {
+        "subject": "土压波动增大",
+        "subject_type": "any"
+      },
+      "after": {
+        "subject": "土压波动增大",
+        "subject_type": "Monitoring"
+      }
+    },
+    {
+      "description": "Reverse 塌方类型 → TBM隧道塌方 relationship",
+      "before": {
+        "subject": "塌方类型",
+        "predicate": "属于",
+        "object": "TBM隧道塌方",
+        "relation_type": "属性关系"
+      },
+      "after": {
+        "subject": "TBM隧道塌方",
+        "predicate": "具有类型",
+        "object": "塌方类型",
+        "relation_type": "属性关系",
+        "weight": 0.4
+      }
+    },
+    {
+      "description": "Replace 不足导致 with standard 导致",
+      "before": {
+        "predicate": "不足导致"
+      },
+      "after": {
+        "predicate": "导致"
+      }
+    },
+    {
+      "description": "Cap attribute/location relation weights",
+      "before": {
+        "relation_type": ["属性关系", "位置关系"],
+        "weight": "> 0.6"
+      },
+      "after": {
+        "weight": 0.5
+      }
+    }
+  ],
+  "relations_delete": [
+    {
+      "description": "Remove non-standard predicate edge",
+      "subject": "风险预警触发",
+      "predicate": "被忽视或响应滞后",
+      "object": "应急处置不当或滞后",
+      "reason": "Non-standard predicate, replaced with proper causal chain"
+    },
+    {
+      "description": "Remove double attribution of 沉降速率阈值",
+      "subject": "沉降速率阈值",
+      "predicate": "属于",
+      "object": "监测指标",
+      "relation_type": "属性关系",
+      "reason": "Creating hierarchy through 控制指标 instead"
+    }
+  ],
+  "relations_add": [
+    {
+      "description": "Unify 设备综合故障 as IntermediateState",
+      "subject": "设备综合故障",
+      "subject_type": "IntermediateState",
+      "object_type": "IntermediateState",
+      "note": "All edges involving 设备综合故障 updated to reflect IntermediateState type"
+    },
+    {
+      "description": "Add proper causal chain for monitoring frequency",
+      "subject": "监测频率不足",
+      "predicate": "导致",
+      "object": "监测盲区形成",
+      "relation_type": "因果关系",
+      "subject_type": "Monitoring",
+      "object_type": "RiskFactor",
+      "weight": 0.8
+    },
+    {
+      "description": "Add replacement for warning response",
+      "subject": "风险预警触发",
+      "predicate": "导致",
+      "object": "预警响应启动",
+      "relation_type": "因果关系",
+      "subject_type": "Monitoring",
+      "object_type": "Human",
+      "weight": 0.6
+    },
+    {
+      "description": "Add indicator hierarchy",
+      "subject": "控制指标",
+      "predicate": "属于",
+      "object": "监测指标",
+      "relation_type": "属性关系",
+      "subject_type": "RiskFactor",
+      "object_type": "RiskFactor",
+      "weight": 0.4
+    }
+  ],
+  "quality_checks": {
+    "no_duplicate_edges": true,
+    "consistent_node_types": true,
+    "weight_caps_applied": true,
+    "mechanism_paths_preserved": true,
+    "valid_json_structure": true
+  },
+  "preserved_edges": [
+    {
+      "description": "Main mechanism chain preserved",
+      "path": "掌子面失稳 → 连锁式塌落扩展 → TBM隧道塌方"
+    },
+    {
+      "description": "Alternative mechanism chain preserved", 
+      "path": "背后空洞 → 地表沉降增大 → 拱顶下沉与应力集中 → TBM隧道塌方"
+    },
+    {
+      "description": "Comprehensive effect preserved",
+      "edge": "施工事件综合效应 → 导致 → TBM隧道塌方"
+    }
+  ]
+}
